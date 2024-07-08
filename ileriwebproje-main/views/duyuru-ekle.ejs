@@ -1,0 +1,49 @@
+<%- include('includes/head.ejs') %>
+
+</head>
+<!-- Body-->
+<body>
+  <%- include('includes/nav.ejs') %>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <form action="/duyuru-ekle" method="post">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-sm-12">
+                <label class="form-label" for="current-pass">Duyuru Başlığı</label>
+                <input class="form-control" type="text" name="duyuru_adi" autocomplete="off">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-12">
+                <label class="form-label" for="current-pass">Açıklama</label>
+                <textarea class="form-control" type="text" name="aciklama" autocomplete="off" style="resize: none; height: 200px; overflow: vertical;"></textarea>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-12">
+                <label class="form-label" for="current-pass">Tarih</label>
+                <input class="form-control" type="date" name="tarih" autocomplete="off">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-12">
+                <label class="form-label" for="current-pass"> Son Tarih</label>
+                <input class="form-control" type="date" name="sonTarih" autocomplete="off">
+              </div>
+            </div>
+            <div class="row justify-content-end pt-3">
+              <div class="col-sm-6">
+                <input type="hidden" name="_csrf" value="<%=csrfToken%>">
+                <button class="btn btn-secondary" type="button">Vazgeç</button>
+                <button class="btn btn-primary ms-3" type="submit" value="1">Gönder</button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+<%- include('includes/foot.ejs') %>

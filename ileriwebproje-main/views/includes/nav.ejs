@@ -1,0 +1,74 @@
+<!-- Google Tag Manager (noscript)-->
+<noscript>
+	<iframe
+		src="//www.googletagmanager.com/ns.html?id=GTM-WKV3GT5"
+		height="0"
+		width="0"
+		style="display: none; visibility: hidden"
+	></iframe>
+</noscript>
+<!-- Page loading spinner-->
+<div class="page-loading active">
+	<div class="page-loading-inner">
+		<div class="page-spinner"></div>
+		<span>Yükleniyor...</span>
+	</div>
+</div>
+<!-- Customizer modal-->
+
+<!-- Customizer toggler-->
+<!-- Customizer offcanvas-->
+<!-- Page wrapper-->
+<main class="page-wrapper">
+	<!-- Navbar. Remove 'fixed-top' class to make the navigation bar scrollable with the page-->
+	<header class="navbar navbar-expand-lg fixed-top bg-light">
+		<div class="container">
+			<a class="navbar-brand pe-sm-3" href="/">
+				<img
+					src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3-UQqEHZZ1IRxzhiB5t98oYDGSgpdO6DrthGxZw31iEHs7iZ0ECNV5QP_GeazmRGxlJA&usqp=CAU"
+					width="75"
+					height="75"
+					alt="Logo"
+				/>
+			</a>
+
+			<button class="navbar-toggler ms-sm-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<nav class="collapse navbar-collapse" id="navbarNav">
+				<ul class="navbar-nav navbar-nav-scroll me-auto" style="--ar-scroll-height: 520px">
+					<% if(yonetici) {%>
+					<li class="nav-item">
+						<a class="nav-link" href="/duyuru-ekle">Duyuru Ekle</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/cikis">Çıkış Yap</a>
+					</li>
+
+					<% }else { %>
+					<li class="nav-item">
+						<a class="nav-link" href="/giris">Giriş Yap</a>
+					</li>
+					<% } %>
+				</ul>
+			</nav>
+		</div>
+	</header>
+	<!-- Page content-->
+	<div class="overflow-hidden">
+		<div class="container pt-5 pb-sm-3 mt-5 mb-2 mb-md-3 mb-lg-4 mb-xxl-5">
+			<!-- Breadcrumb-->
+			<nav aria-label="breadcrumb">
+				<ol class="pt-lg-3 pb-lg-4 pb-2 breadcrumb">
+					<li class="breadcrumb-item"><a href="/">Anasayfa</a></li>
+					<li class="breadcrumb-item active" aria-current="page"><%=sayfaBasligi%></li>
+				</ol>
+			</nav>
+			<!-- Page title-->
+			<% if(sayfaBasligi.length>0) { %>
+			<h1 class="text-center"><%=sayfaBasligi%></h1>
+			<% } %>
+			<!-- Item-->
+		</div>
+	</div>
+</main>
